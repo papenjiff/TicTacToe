@@ -1,0 +1,19 @@
+body {
+    background-color: #000000;
+    color: #DDDDDD;
+    font-family: monospace;
+}
+
+div.board {
+    display: none;
+}
+
+span.box {
+    font-family: monospace;
+    font-size: 5em;
+}
+
+span.box:hover {
+    background-color: #333333;
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="tictactoe.js"></script>
+    <link rel="stylesheet" type="text/css" href="tictactoe.css" />
+    <title>TicTacToe</title>
+</head>
+<body>
+<h2>Shall we play a game? </h2>
+
+<div class="board">
+    <div class="row">
+        <span class="box" id="box-0-0" data-row="0" data-column="0">[&nbsp;]</span>
+        <span class="box" id="box-0-1" data-row="0" data-column="1">[&nbsp;]</span>
+        <span class="box" id="box-0-2" data-row="0" data-column="2">[&nbsp;]</span>
+    </div>
+    <div class="row">
+        <span class="box" id="box-1-0" data-row="1" data-column="0">[&nbsp;]</span>
+        <span class="box" id="box-1-1" data-row="1" data-column="1">[&nbsp;]</span>
+        <span class="box" id="box-1-2" data-row="1" data-column="2">[&nbsp;]</span>
+    </div>
+    <div class="row">
+        <span class="box" id="box-2-0" data-row="2" data-column="0">[&nbsp;]</span>
+        <span class="box" id="box-2-1" data-row="2" data-column="1">[&nbsp;]</span>
+        <span class="box" id="box-2-2" data-row="2" data-column="2">[&nbsp;]</span>
+    </div>
+    <div>
+        <form>
+            <label for="first">First Move:</label>
+            <select id="first" name="first">
+                <option value="2" selected>Player</option>
+                <option value="1">Computer</option>
+            </select>
+            <button id="new" name="new">New Game</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    var gameBoard = new TicTacToe();
+    $(document).ready(function() {
+        gameBoard.init();
+    });
+</script>
+
+<audio id="game_audio_intro" autoplay="autoplay">
+    <source src="wargames_play_game.wav" type="audio/wav"/>
+</audio>
+
+<audio id="game_audio_not2play">
+    <source src="not2play.wav" type="audio/wav"/>
+</audio>
+
+</body>
+</html>
